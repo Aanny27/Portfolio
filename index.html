@@ -1,0 +1,1231 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Phạm Quân — Cybersecurity Portfolio | Soft Cyber SOC</title>
+  <meta name="description" content="Personal cybersecurity portfolio of Phạm Quân — exploring Blue Team defense, Red Team offense, and Purple Team detection engineering.">
+  
+  <!-- Open Graph / Social Metadata -->
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Phạm Quân — Cybersecurity Portfolio">
+  <meta property="og:description" content="Cybersecurity enthusiast exploring defense, offense, and everything in between. Soft Cyber — Cute Outside, Security Inside.">
+  <meta property="og:image" content="assets/images/profile-placeholder.svg">
+  <meta name="theme-color" content="#FFF5F7">
+
+  <!-- Favicon Placeholder (Relative Path for GitHub Pages compatibility) -->
+  <link rel="icon" type="image/svg+xml" href="assets/images/favicon.svg">
+
+  <!-- Google Fonts with graceful system font fallbacks -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600&family=Nunito:wght@600;700;800&display=swap" rel="stylesheet">
+
+  <!-- Main Stylesheet -->
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body class="intro-active">
+
+  <!-- Skip to Main Content Link for Keyboard Users -->
+  <a href="#main-content" class="skip-to-content">Skip to main portfolio content</a>
+
+  <!-- =====================================================================
+       OPENING INTRO — CINEMATIC SOC EXPERIENCE
+       ===================================================================== -->
+  <aside id="intro-overlay" class="intro-overlay" role="dialog" aria-modal="true" aria-labelledby="intro-title">
+    
+    <!-- Video Container & Graceful Pastel SOC Fallback -->
+    <div class="intro-media-wrap">
+      <!-- Fallback visual canvas (always renders behind video or when video is unavailable/reduced-motion) -->
+      <div class="intro-fallback-scene" aria-hidden="true">
+        <div class="fallback-grid"></div>
+        <div class="fallback-binary">
+          <span>01001101</span><span>10110010</span><span>01110100</span><span>11001010</span>
+          <span>00101110</span><span>10011101</span><span>01010111</span><span>11100011</span>
+        </div>
+        <svg class="fallback-network-svg" viewBox="0 0 800 500" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <g stroke="#7798FF" stroke-width="1.5" stroke-opacity="0.35">
+            <line x1="140" y1="250" x2="260" y2="160"/>
+            <line x1="140" y1="250" x2="270" y2="330"/>
+            <line x1="260" y1="160" x2="410" y2="190"/>
+            <line x1="270" y1="330" x2="410" y2="190"/>
+            <line x1="270" y1="330" x2="430" y2="350"/>
+            <line x1="410" y1="190" x2="560" y2="150"/>
+            <line x1="430" y1="350" x2="580" y2="290"/>
+            <line x1="560" y1="150" x2="670" y2="230"/>
+            <line x1="580" y1="290" x2="670" y2="230"/>
+          </g>
+          <g fill="#FFF5F7" stroke-width="2.5">
+            <circle cx="140" cy="250" r="10" stroke="#FF83B7"/>
+            <circle cx="260" cy="160" r="9" stroke="#73E4D2"/>
+            <circle cx="270" cy="330" r="9" stroke="#7798FF"/>
+            <circle cx="410" cy="190" r="11" stroke="#73E4D2"/>
+            <circle cx="430" cy="350" r="9" stroke="#DCD2FF"/>
+            <circle cx="560" cy="150" r="10" stroke="#73E4D2"/>
+            <circle cx="580" cy="290" r="9" stroke="#FF83B7"/>
+            <circle cx="670" cy="230" r="12" stroke="#73E4D2"/>
+          </g>
+        </svg>
+      </div>
+
+      <!-- Supplied SOC Intro Video -->
+      <video 
+        id="intro-video" 
+        class="intro-video" 
+        src="assets/videos/soc_showreel_cute.mp4" 
+        muted 
+        playsinline 
+        preload="metadata"
+        aria-label="Pastel Security Operations Center opening animation">
+      </video>
+
+      <!-- Soft radial readability veil -->
+      <div class="intro-veil" aria-hidden="true"></div>
+    </div>
+
+    <!-- Retro-Futuristic Viewfinder HUD Frame -->
+    <div class="intro-hud-frame" aria-hidden="true">
+      <div class="hud-corner hud-top-left">
+        <span class="rec-dot"></span>
+        <span class="mono-label">REC // SOC_STREAM</span>
+      </div>
+      <div class="hud-corner hud-top-right">
+        <span class="mono-label">PORTFOLIO // TELEMETRY</span>
+      </div>
+      <div class="hud-corner hud-bottom-left">
+        <span class="mono-label">SOC // THREAT DETECTION &amp; RESPONSE</span>
+      </div>
+      <div class="hud-corner hud-bottom-right">
+        <span id="intro-timecode" class="mono-label">00:00:00:00</span>
+      </div>
+    </div>
+
+    <!-- Top-Right Quick Skip Button -->
+    <button type="button" id="skip-intro-top" class="btn-skip-top" aria-label="Skip intro and go directly to portfolio">
+      <span>Skip Intro</span>
+      <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+        <polygon points="5 4 15 12 5 20 5 4"></polygon>
+        <line x1="19" y1="5" x2="19" y2="19"></line>
+      </svg>
+    </button>
+
+    <!-- Center Intro Card -->
+    <div class="intro-card">
+      <div class="terminal-window-bar" aria-hidden="true">
+        <span class="win-dot dot-pink"></span>
+        <span class="win-dot dot-mint"></span>
+        <span class="win-dot dot-blue"></span>
+      </div>
+      <div class="intro-card-body">
+        <div class="intro-status-pill">
+          <span class="status-pulse"></span>
+          <span class="mono-label">SYSTEM READY // SOFT CYBER INTERFACE</span>
+        </div>
+        <h1 id="intro-title" class="intro-owner-name" data-config="ownerName">[YOUR NAME]</h1>
+        <p class="intro-tagline">Exploring the world of Cybersecurity.</p>
+        <p id="video-status-note" class="intro-subnote mono-label" hidden>
+        </p>
+        <div class="intro-actions">
+          <button type="button" id="enter-portfolio-btn" class="btn btn-primary btn-lg">
+            <span>Enter Portfolio</span>
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+              <line x1="5" y1="12" x2="19" y2="12"></line>
+              <polyline points="12 5 19 12 12 19"></polyline>
+            </svg>
+          </button>
+          <button type="button" id="skip-intro-btn" class="btn btn-ghost">
+            Skip Intro
+          </button>
+        </div>
+      </div>
+    </div>
+  </aside>
+
+  <!-- =====================================================================
+       Ambient Background Decorations (Grid & Subtle Sparkles)
+       ===================================================================== -->
+  <div class="ambient-bg" aria-hidden="true">
+    <span class="sparkle sp-pink sp-1">✦</span>
+    <span class="sparkle sp-mint sp-2">✦</span>
+    <span class="sparkle sp-blue sp-3">✦</span>
+    <span class="sparkle sp-lavender sp-4">✦</span>
+  </div>
+
+  <!-- =====================================================================
+       STICKY NAVIGATION HEADER
+       ===================================================================== -->
+  <header class="site-header" id="site-header">
+    <div class="container nav-container">
+      <a href="#hero" class="brand-logo" aria-label="Home — Phạm Quân Cybersecurity Portfolio">
+        <!-- Cute smiling shield SVG inspired by the video's defense layers -->
+        <svg class="brand-shield" width="32" height="32" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+          <path d="M20 4L6 10V19.5C6 28.4 11.9 36.3 20 39C28.1 36.3 34 28.4 34 19.5V10L20 4Z" fill="#E8FBF8" stroke="#73E4D2" stroke-width="2.5" stroke-linejoin="round"/>
+          <circle cx="15" cy="19" r="1.8" fill="#29283A"/>
+          <circle cx="25" cy="19" r="1.8" fill="#29283A"/>
+          <circle cx="12.5" cy="21.5" r="2" fill="#FF83B7" fill-opacity="0.65"/>
+          <circle cx="27.5" cy="21.5" r="2" fill="#FF83B7" fill-opacity="0.65"/>
+          <path d="M16.5 22.5C17.4 24 18.6 24.6 20 24.6C21.4 24.6 22.6 24 23.5 22.5" stroke="#29283A" stroke-width="2" stroke-linecap="round"/>
+        </svg>
+        <div class="brand-text">
+          <span class="brand-name" data-config="ownerName">[YOUR NAME]</span>
+          <span class="brand-tag mono-label">SOC // PORTFOLIO</span>
+        </div>
+      </a>
+
+      <!-- Mobile Menu Toggle -->
+      <button 
+        type="button" 
+        id="mobile-menu-toggle" 
+        class="mobile-menu-toggle" 
+        aria-expanded="false" 
+        aria-controls="primary-nav" 
+        aria-label="Toggle navigation menu">
+        <span class="hamburger-bar"></span>
+        <span class="hamburger-bar"></span>
+        <span class="hamburger-bar"></span>
+      </button>
+
+      <!-- Navigation Links -->
+      <nav id="primary-nav" class="primary-nav" aria-label="Primary Navigation">
+        <ul class="nav-list">
+          <li><a href="#about" class="nav-link">About</a></li>
+          <li><a href="#skills" class="nav-link">Skills</a></li>
+          <li><a href="#projects" class="nav-link">Projects</a></li>
+          <li><a href="#experience" class="nav-link">Experience</a></li>
+          <li><a href="#certifications" class="nav-link">Certifications</a></li>
+          <li><a href="#contact" class="nav-link nav-link-cta">Contact</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <!-- =====================================================================
+       MAIN PORTFOLIO CONTENT
+       ===================================================================== -->
+  <main id="main-content">
+
+    <!-- -------------------------------------------------------------------
+         5. MAIN HERO SECTION
+         ------------------------------------------------------------------- -->
+    <section id="hero" class="hero-section section-padding">
+      <div class="container hero-grid">
+        
+        <!-- Left Column: Introduction & Actions -->
+        <div class="hero-content reveal-item">
+          <div class="eyebrow-badge">
+            <span class="badge-dot"></span>
+            <span class="mono-label">CYBERSECURITY PORTFOLIO</span>
+          </div>
+
+          <h1 class="hero-heading">
+            Hi, I'm <span class="text-gradient" data-config="ownerName">[YOUR NAME]</span>.
+          </h1>
+
+          <p class="hero-subtitle">
+            Cybersecurity enthusiast exploring defense, offense, and everything in between.
+          </p>
+
+          <p class="hero-description">
+            I enjoy understanding how systems work, investigating security events, testing defenses, and building practical security projects.
+          </p>
+
+          <div class="hero-cta-group">
+            <a href="#projects" class="btn btn-primary">
+              <span>Explore My Projects</span>
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                <path d="M7 17l9.2-9.2M17 17V7H7"/>
+              </svg>
+            </a>
+            <a href="#contact" class="btn btn-secondary">
+              <span>Get in Touch</span>
+            </a>
+          </div>
+
+          <!-- Social Links Bar (Editable via js/main.js PORTFOLIO_CONFIG or directly in HTML) -->
+          <div class="hero-socials">
+            <span class="mono-label socials-label">CONNECT //</span>
+            <ul class="social-icon-list" aria-label="Social and contact links">
+              <li>
+                <a href="https://github.com/Aanny27" data-social="github" target="_blank" rel="noopener noreferrer" class="social-pill" aria-label="GitHub profile (placeholder)">
+                  <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                    <path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path>
+                  </svg>
+                  <span>GitHub</span>
+                </a>
+              </li>
+              <li>
+                <a href="https://www.linkedin.com/in/qu%C3%A2n-ph%E1%BA%A1m-ba1164371" data-social="linkedin" target="_blank" rel="noopener noreferrer" class="social-pill" aria-label="LinkedIn profile (placeholder)">
+                  <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                    <path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"></path>
+                    <rect x="2" y="9" width="4" height="12"></rect>
+                    <circle cx="4" cy="4" r="2"></circle>
+                  </svg>
+                  <span>LinkedIn</span>
+                </a>
+              </li>
+              <li>
+                <a href="https://www.facebook.com/quanka27/" data-social="facebook" target="_blank" rel="noopener noreferrer" class="social-pill" aria-label="Facebook profile (placeholder)">
+                  <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                    <path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"></path>
+                  </svg>
+                  <span>Facebook</span>
+                </a>
+              </li>
+              <li>
+                <a href="mailto:phamquan270306@gmail.com" data-social="email" class="social-pill" aria-label="Send an email (placeholder)">
+                  <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                    <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path>
+                    <polyline points="22,6 12,13 2,6"></polyline>
+                  </svg>
+                  <span>Email</span>
+                </a>
+              </li>
+            </ul>
+          </div>
+        </div>
+
+        <!-- Right Column: Pastel SOC Status & Profile Visual Panel -->
+        <div class="hero-visual reveal-item">
+          <div class="soc-console-card">
+            <!-- Window Top Bar inspired by soc_showreel_cute.mp4 -->
+            <div class="terminal-window-bar">
+              <span class="win-dot dot-pink"></span>
+              <span class="win-dot dot-mint"></span>
+              <span class="win-dot dot-blue"></span>
+              <span class="win-title">soc-core:~$ status --profile</span>
+              <span class="win-status-badge">ONLINE</span>
+            </div>
+
+            <div class="soc-console-body">
+              <!-- Profile Identity Row -->
+              <div class="profile-header-row">
+                <div class="avatar-frame">
+                  <img 
+                    src="assets/images/profile-placeholder.svg" 
+                    alt="Profile avatar placeholder for [YOUR NAME]" 
+                    class="profile-avatar"
+                    width="88"
+                    height="88">
+                  <span class="avatar-status-ring" aria-hidden="true"></span>
+                </div>
+                <div class="profile-meta">
+                  <span class="mono-label meta-tag">ANALYST ID // 01</span>
+                  <h2 class="profile-card-name" data-config="ownerName">[YOUR NAME]</h2>
+                  <p class="profile-card-role" data-config="rolePlaceholder">[YOUR ROLE / HEADLINE PLACEHOLDER]</p>
+                  <div class="team-pills" aria-label="Security focus areas">
+                    <span class="mini-pill pill-mint">Blue Team</span>
+                    <span class="mini-pill pill-pink">Red Team</span>
+                    <span class="mini-pill pill-lavender">Purple Team</span>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Decorative Interactive Network Node Diagram -->
+              <div class="soc-topology-box" aria-hidden="true">
+                <div class="topology-header">
+                  <span class="mono-label">DEFENSE TOPOLOGY // ACTIVE NODES</span>
+                  <span class="mono-label text-mint">28 / 28 SECURE</span>
+                </div>
+                <svg class="hero-topology-svg" viewBox="0 0 360 130" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <!-- Connecting fine lines -->
+                  <path d="M40 65 L115 32 L195 45 L275 28 L325 65" stroke="#7798FF" stroke-width="1.5" stroke-dasharray="3 3" opacity="0.55"/>
+                  <path d="M40 65 L115 98 L195 85 L275 100 L325 65" stroke="#73E4D2" stroke-width="1.5" opacity="0.7"/>
+                  <path d="M115 32 L115 98 M195 45 L195 85 M275 28 L275 100" stroke="#DCD2FF" stroke-width="1.5"/>
+
+                  <!-- Animated pulse along path -->
+                  <circle r="3.5" fill="#FF83B7">
+                    <animateMotion dur="6s" repeatCount="indefinite" path="M40 65 L115 32 L195 45 L275 28 L325 65 L275 100 L195 85 L115 98 Z" />
+                  </circle>
+
+                  <!-- Network Nodes -->
+                  <g class="topo-node">
+                    <circle cx="40" cy="65" r="12" fill="#FFF5F7" stroke="#FF83B7" stroke-width="2.2"/>
+                    <circle cx="40" cy="65" r="4.5" fill="#FF83B7"/>
+                  </g>
+                  <g class="topo-node">
+                    <circle cx="115" cy="32" r="9" fill="#FFF5F7" stroke="#7798FF" stroke-width="2"/>
+                    <circle cx="115" cy="32" r="3.5" fill="#7798FF"/>
+                  </g>
+                  <g class="topo-node">
+                    <circle cx="115" cy="98" r="9" fill="#FFF5F7" stroke="#73E4D2" stroke-width="2"/>
+                    <circle cx="115" cy="98" r="3.5" fill="#73E4D2"/>
+                  </g>
+                  <g class="topo-node">
+                    <circle cx="195" cy="45" r="10" fill="#FFF5F7" stroke="#73E4D2" stroke-width="2"/>
+                    <circle cx="195" cy="45" r="4" fill="#73E4D2"/>
+                  </g>
+                  <g class="topo-node">
+                    <circle cx="195" cy="85" r="10" fill="#FFF5F7" stroke="#FF83B7" stroke-width="2"/>
+                    <circle cx="195" cy="85" r="4" fill="#FF83B7"/>
+                  </g>
+                  <g class="topo-node">
+                    <circle cx="275" cy="28" r="9" fill="#FFF5F7" stroke="#7798FF" stroke-width="2"/>
+                    <circle cx="275" cy="28" r="3.5" fill="#7798FF"/>
+                  </g>
+                  <g class="topo-node">
+                    <circle cx="275" cy="100" r="9" fill="#FFF5F7" stroke="#73E4D2" stroke-width="2"/>
+                    <circle cx="275" cy="100" r="3.5" fill="#73E4D2"/>
+                  </g>
+                  <g class="topo-node">
+                    <circle cx="325" cy="65" r="13" fill="#E8FBF8" stroke="#73E4D2" stroke-width="2.2"/>
+                    <path d="M321 65L324 68L330 62" stroke="#29283A" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                  </g>
+                </svg>
+              </div>
+
+              <!-- Mini Telemetry Readout -->
+              <div class="telemetry-strip" aria-hidden="true">
+                <div class="telemetry-item">
+                  <span class="mono-label">FOCUS</span>
+                  <strong>DETECT &amp; DEFEND</strong>
+                </div>
+                <div class="telemetry-item">
+                  <span class="mono-label">LAB ENVIRONMENT</span>
+                  <strong>SIEM / SOAR / CTF</strong>
+                </div>
+                <div class="telemetry-item">
+                  <span class="mono-label">STATUS</span>
+                  <strong class="status-ok">[ OK ] LEARNING</strong>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- -------------------------------------------------------------------
+         6. ABOUT SECTION
+         ------------------------------------------------------------------- -->
+    <section id="about" class="about-section section-padding">
+      <div class="container">
+        
+        <div class="section-header reveal-item">
+          <span class="section-tag mono-label">01 // PROFILE_OVERVIEW</span>
+          <h2 class="section-title">A Little About Me</h2>
+          <p class="section-subtitle">
+            Combining curiosity, analytical thinking, and hands-on lab experimentation.
+          </p>
+        </div>
+
+        <div class="about-grid">
+          <!-- Main Editorial Bio Card -->
+          <div class="card about-bio-card reveal-item">
+            <div class="card-terminal-tag mono-label">cat ./about_me.md</div>
+            <h3 class="about-card-heading">Hello! I'm <span data-config="ownerName">[YOUR NAME]</span>.</h3>
+            <p>
+              <strong>[SHORT BIO PLACEHOLDER]</strong> — Replace this paragraph with your personal introduction. For example: I am a passionate cybersecurity student and home-lab builder fascinated by how modern systems are defended, how threats are detected in real time, and how offensive insights strengthen defensive architecture.
+            </p>
+            <p>
+              Whether I am analyzing event logs in a SIEM, mapping adversary behaviors to MITRE ATT&amp;CK, or testing web applications in controlled lab environments, I enjoy bridging the gap between <strong>Blue Team defense</strong> and <strong>Red Team offense</strong>.
+            </p>
+
+            <!-- Personal Motto Banner -->
+            <blockquote class="motto-box">
+              <span class="motto-label mono-label">PERSONAL MOTTO //</span>
+              <p class="motto-text">“Stay curious. Think critically. Secure responsibly.”</p>
+            </blockquote>
+          </div>
+
+          <!-- Side Column: Focus Pillars & Optional Education -->
+          <div class="about-side-stack">
+            
+            <div class="card about-pillar-card reveal-item">
+              <div class="pillar-header">
+                <span class="pillar-icon icon-mint" aria-hidden="true">
+                  <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+                </span>
+                <div>
+                  <span class="mono-label">CURRENT FOCUS</span>
+                  <h3>Interests &amp; Learning Goals</h3>
+                </div>
+              </div>
+              <ul class="clean-check-list">
+                <li><strong>Security Interests:</strong> <span>[EDITABLE PLACEHOLDER] Threat detection, SOC operations, log analysis, vulnerability assessment, and detection engineering.</span></li>
+                <li><strong>Current Goals:</strong> <span>[EDITABLE PLACEHOLDER] Deepening hands-on experience with SIEM alert triage, writing high-fidelity detection rules, and practicing web security labs.</span></li>
+                <li><strong>Security Approach:</strong> <span>Understanding root causes rather than just symptoms—documenting every lab clearly and testing assumptions methodically.</span></li>
+              </ul>
+            </div>
+
+            <!-- Optional Education Card (Clearly marked placeholders) -->
+            <div class="card about-education-card reveal-item">
+              <div class="pillar-header">
+                <span class="pillar-icon icon-lavender" aria-hidden="true">
+                  <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 10v6M2 10l10-5 10 5-10 5z"/><path d="M6 12v5c3 3 9 3 12 0v-5"/></svg>
+                </span>
+                <div>
+                  <span class="mono-label">EDUCATION // OPTIONAL</span>
+                  <h3>Academic Background</h3>
+                </div>
+              </div>
+              <div class="edu-placeholder-item">
+                <div class="edu-top">
+                  <strong>[YOUR DEGREE / MAJOR PLACEHOLDER]</strong>
+                  <span class="mono-badge">[YEAR – YEAR]</span>
+                </div>
+                <p class="edu-inst">[YOUR UNIVERSITY / INSTITUTION NAME PLACEHOLDER]</p>
+                <p class="edu-note">[OPTIONAL DETAILS PLACEHOLDER — e.g., Relevant coursework: Network Security, Operating Systems, Cryptography, or Cybersecurity Club member.]</p>
+              </div>
+            </div>
+
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- -------------------------------------------------------------------
+         7. SKILLS SECTION (MY SECURITY TOOLBOX)
+         ------------------------------------------------------------------- -->
+    <section id="skills" class="skills-section section-padding">
+      <div class="container">
+        
+        <div class="section-header reveal-item">
+          <span class="section-tag mono-label">02 // CAPABILITIES_MATRIX</span>
+          <h2 class="section-title">My Security Toolbox</h2>
+          <p class="section-subtitle">
+            Organized across defensive operations, offensive testing, and collaborative detection engineering. All skill tags are editable placeholders.
+          </p>
+
+          <!-- Filter & Status Legend (Distinguishes Acquired vs. Currently Learning without fake percentages) -->
+          <div class="skills-legend-bar" role="group" aria-label="Filter skills by learning status">
+            <button type="button" class="legend-filter-btn active" data-skill-filter="all">
+              All Skills
+            </button>
+            <button type="button" class="legend-filter-btn" data-skill-filter="acquired">
+              <span class="status-dot dot-acquired"></span>
+              <span>Acquired / Practiced</span>
+            </button>
+            <button type="button" class="legend-filter-btn" data-skill-filter="learning">
+              <span class="status-dot dot-learning"></span>
+              <span>Currently Learning</span>
+            </button>
+          </div>
+        </div>
+
+        <div class="skills-grid">
+          
+          <!-- GROUP 1: BLUE TEAM — DEFENSE (Mint / Cyan Accent) -->
+          <article class="card skill-card skill-card-blue-team reveal-item">
+            <div class="skill-card-top">
+              <div class="skill-team-icon" aria-hidden="true">
+                <!-- Cute Smiling Shield Icon -->
+                <svg width="36" height="36" viewBox="0 0 40 40" fill="none">
+                  <path d="M20 4L6 10V19.5C6 28.4 11.9 36.3 20 39C28.1 36.3 34 28.4 34 19.5V10L20 4Z" fill="#E8FBF8" stroke="#73E4D2" stroke-width="2.5"/>
+                  <circle cx="15" cy="19" r="1.8" fill="#29283A"/>
+                  <circle cx="25" cy="19" r="1.8" fill="#29283A"/>
+                  <path d="M16.5 23C17.5 24.3 18.7 24.8 20 24.8C21.3 24.8 22.5 24.3 23.5 23" stroke="#29283A" stroke-width="2" stroke-linecap="round"/>
+                </svg>
+              </div>
+              <div>
+                <span class="mono-label team-code">TEAM_01 // DEFENSE</span>
+                <h3 class="skill-group-title">Blue Team — Defense</h3>
+              </div>
+            </div>
+            <p class="skill-group-desc">
+              Monitoring systems, triaging alerts, analyzing logs, and defending infrastructure against threats.
+            </p>
+            <ul class="skill-tag-list" aria-label="Blue Team skills">
+              <li class="skill-tag" data-status="acquired">
+                <span class="skill-name">Security Operations Center (SOC)</span>
+                <span class="skill-status-badge badge-acquired">Practiced</span>
+              </li>
+              <li class="skill-tag" data-status="acquired">
+                <span class="skill-name">SIEM</span>
+                <span class="skill-status-badge badge-acquired">Practiced</span>
+              </li>
+              <li class="skill-tag" data-status="acquired">
+                <span class="skill-name">Security monitoring</span>
+                <span class="skill-status-badge badge-acquired">Practiced</span>
+              </li>
+              <li class="skill-tag" data-status="acquired">
+                <span class="skill-name">Alert triage</span>
+                <span class="skill-status-badge badge-acquired">Practiced</span>
+              </li>
+              <li class="skill-tag" data-status="acquired">
+                <span class="skill-name">Log analysis</span>
+                <span class="skill-status-badge badge-acquired">Practiced</span>
+              </li>
+              <li class="skill-tag" data-status="acquired">
+                <span class="skill-name">Wazuh</span>
+                <span class="skill-status-badge badge-acquired">Practiced</span>
+              </li>
+              <li class="skill-tag" data-status="acquired">
+                <span class="skill-name">Windows &amp; Linux security</span>
+                <span class="skill-status-badge badge-acquired">Practiced</span>
+              </li>
+              <li class="skill-tag" data-status="learning">
+                <span class="skill-name">Incident response fundamentals</span>
+                <span class="skill-status-badge badge-learning">Learning</span>
+              </li>
+              <li class="skill-tag" data-status="learning">
+                <span class="skill-name">Digital forensics fundamentals</span>
+                <span class="skill-status-badge badge-learning">Learning</span>
+              </li>
+            </ul>
+          </article>
+
+          <!-- GROUP 2: RED TEAM — OFFENSE (Pastel Pink Accent) -->
+          <article class="card skill-card skill-card-red-team reveal-item">
+            <div class="skill-card-top">
+              <div class="skill-team-icon" aria-hidden="true">
+                <!-- Terminal / Target Icon -->
+                <svg width="36" height="36" viewBox="0 0 40 40" fill="none">
+                  <rect x="5" y="7" width="30" height="26" rx="6" fill="#FFF0F6" stroke="#FF83B7" stroke-width="2.5"/>
+                  <path d="M13 16L18 20L13 24" stroke="#29283A" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/>
+                  <line x1="21" y1="24" x2="27" y2="24" stroke="#FF83B7" stroke-width="2.2" stroke-linecap="round"/>
+                </svg>
+              </div>
+              <div>
+                <span class="mono-label team-code">TEAM_02 // OFFENSE</span>
+                <h3 class="skill-group-title">Red Team — Offense</h3>
+              </div>
+            </div>
+            <p class="skill-group-desc">
+              Thinking like an adversary to uncover weaknesses, test web applications, and validate security posture.
+            </p>
+            <ul class="skill-tag-list" aria-label="Red Team skills">
+              <li class="skill-tag" data-status="acquired">
+                <span class="skill-name">Penetration testing fundamentals</span>
+                <span class="skill-status-badge badge-acquired">Practiced</span>
+              </li>
+              <li class="skill-tag" data-status="acquired">
+                <span class="skill-name">Reconnaissance</span>
+                <span class="skill-status-badge badge-acquired">Practiced</span>
+              </li>
+              <li class="skill-tag" data-status="acquired">
+                <span class="skill-name">OWASP Top 10</span>
+                <span class="skill-status-badge badge-acquired">Practiced</span>
+              </li>
+              <li class="skill-tag" data-status="acquired">
+                <span class="skill-name">Nmap</span>
+                <span class="skill-status-badge badge-acquired">Practiced</span>
+              </li>
+              <li class="skill-tag" data-status="acquired">
+                <span class="skill-name">CTF labs</span>
+                <span class="skill-status-badge badge-acquired">Practiced</span>
+              </li>
+              <li class="skill-tag" data-status="learning">
+                <span class="skill-name">Web application security</span>
+                <span class="skill-status-badge badge-learning">Learning</span>
+              </li>
+              <li class="skill-tag" data-status="learning">
+                <span class="skill-name">Vulnerability assessment</span>
+                <span class="skill-status-badge badge-learning">Learning</span>
+              </li>
+              <li class="skill-tag" data-status="learning">
+                <span class="skill-name">Burp Suite</span>
+                <span class="skill-status-badge badge-learning">Learning</span>
+              </li>
+            </ul>
+          </article>
+
+          <!-- GROUP 3: PURPLE TEAM — COLLABORATION (Lavender / Electric Blue Accent) -->
+          <article class="card skill-card skill-card-purple-team reveal-item">
+            <div class="skill-card-top">
+              <div class="skill-team-icon" aria-hidden="true">
+                <!-- Connected Nodes / Radar Icon -->
+                <svg width="36" height="36" viewBox="0 0 40 40" fill="none">
+                  <circle cx="20" cy="20" r="15" fill="#F4F0FF" stroke="#7798FF" stroke-width="2.2"/>
+                  <circle cx="14" cy="16" r="3" fill="#FF83B7"/>
+                  <circle cx="26" cy="16" r="3" fill="#73E4D2"/>
+                  <circle cx="20" cy="26" r="3" fill="#7798FF"/>
+                  <path d="M14 16L26 16L20 26Z" stroke="#29283A" stroke-width="1.6"/>
+                </svg>
+              </div>
+              <div>
+                <span class="mono-label team-code">TEAM_03 // SYNERGY</span>
+                <h3 class="skill-group-title">Purple Team — Collaboration</h3>
+              </div>
+            </div>
+            <p class="skill-group-desc">
+              Connecting offensive simulations with defensive telemetry to build, test, and refine detections.
+            </p>
+            <ul class="skill-tag-list" aria-label="Purple Team skills">
+              <li class="skill-tag" data-status="acquired">
+                <span class="skill-name">MITRE ATT&amp;CK mapping</span>
+                <span class="skill-status-badge badge-acquired">Practiced</span>
+              </li>
+              <li class="skill-tag" data-status="acquired">
+                <span class="skill-name">Detection validation</span>
+                <span class="skill-status-badge badge-acquired">Practiced</span>
+              </li>
+              <li class="skill-tag" data-status="learning">
+                <span class="skill-name">Detection engineering fundamentals</span>
+                <span class="skill-status-badge badge-learning">Learning</span>
+              </li>
+              <li class="skill-tag" data-status="learning">
+                <span class="skill-name">Authorized attack simulation</span>
+                <span class="skill-status-badge badge-learning">Learning</span>
+              </li>
+              <li class="skill-tag" data-status="learning">
+                <span class="skill-name">Detection rule development</span>
+                <span class="skill-status-badge badge-learning">Learning</span>
+              </li>
+              <li class="skill-tag" data-status="learning">
+                <span class="skill-name">Improving defensive coverage</span>
+                <span class="skill-status-badge badge-learning">Learning</span>
+              </li>
+            </ul>
+          </article>
+
+        </div>
+
+      </div>
+    </section>
+
+    <!-- -------------------------------------------------------------------
+         8. PROJECTS SECTION (THINGS I'VE BEEN BUILDING)
+         ------------------------------------------------------------------- -->
+    <section id="projects" class="projects-section section-padding">
+      <div class="container">
+        
+        <div class="section-header reveal-item">
+          <span class="section-tag mono-label">03 // HANDS_ON_LABS</span>
+          <h2 class="section-title">Things I've Been Building</h2>
+          <p class="section-subtitle">
+            Hands-on security labs, monitoring environments, and detection experiments. (Note: Cards below are editable placeholders—replace with your confirmed repositories.)
+          </p>
+
+          <!-- Category Filter Tabs -->
+          <div class="project-filter-bar" role="group" aria-label="Filter projects by category">
+            <button type="button" class="project-filter-btn active" data-project-filter="all">All Labs</button>
+            <button type="button" class="project-filter-btn" data-project-filter="blue">Blue Team</button>
+            <button type="button" class="project-filter-btn" data-project-filter="red">Red Team</button>
+            <button type="button" class="project-filter-btn" data-project-filter="purple">Purple Team</button>
+          </div>
+        </div>
+
+        <div class="projects-grid">
+
+          <!-- PROJECT 1: AI-Enhanced SOC / SIEM Lab -->
+          <article class="card project-card reveal-item" data-category="blue">
+            <div class="project-thumb thumb-mint" aria-hidden="true">
+              <div class="thumb-window-dots">
+                <span></span><span></span><span></span>
+                <small class="mono-label">siem-ai-triage.lab</small>
+              </div>
+              <svg class="project-illustration" viewBox="0 0 320 120" fill="none">
+                <rect x="20" y="22" width="125" height="76" rx="8" fill="#FFFFFF" stroke="#73E4D2" stroke-width="2"/>
+                <line x1="34" y1="42" x2="96" y2="42" stroke="#29283A" stroke-width="3" stroke-linecap="round"/>
+                <line x1="34" y1="58" x2="128" y2="58" stroke="#7798FF" stroke-width="2.5" stroke-linecap="round"/>
+                <line x1="34" y1="74" x2="112" y2="74" stroke="#FF83B7" stroke-width="2.5" stroke-linecap="round"/>
+                <path d="M145 60 H185" stroke="#7798FF" stroke-width="2" stroke-dasharray="4 4"/>
+                <circle cx="235" cy="60" r="34" fill="#FFFFFF" stroke="#FF83B7" stroke-width="2"/>
+                <path d="M223 60L231 68L249 50" stroke="#73E4D2" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+              </svg>
+            </div>
+
+            <div class="project-body">
+              <div class="project-meta-top">
+                <span class="category-pill pill-mint">Blue Team // SOC &amp; SIEM</span>
+                <span class="mono-badge">[PLACEHOLDER LAB]</span>
+              </div>
+              <h3 class="project-title">AI-Enhanced SOC / SIEM Lab</h3>
+              <p class="project-description">
+                An experimental security monitoring environment exploring AI-assisted alert analysis and investigation workflows.
+              </p>
+              <ul class="tech-tag-list" aria-label="Technologies used">
+                <li>SIEM</li>
+                <li>Alert Triage</li>
+                <li>Log Analysis</li>
+                <li>Automation</li>
+              </ul>
+            </div>
+
+            <div class="project-footer">
+              <a href="https://github.com/YOUR-USERNAME-HERE/YOUR-REPO-HERE" target="_blank" rel="noopener noreferrer" class="btn-link-github" aria-label="View AI-Enhanced SOC / SIEM Lab on GitHub (placeholder)">
+                <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                  <path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path>
+                </svg>
+                <span>View on GitHub</span>
+              </a>
+              <a href="#projects" class="btn-link-secondary" aria-label="Optional documentation link placeholder for AI-Enhanced SOC Lab">
+                <span>Lab Notes (Optional)</span>
+                <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                  <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path>
+                  <polyline points="15 3 21 3 21 9"></polyline>
+                  <line x1="10" y1="14" x2="21" y2="3"></line>
+                </svg>
+              </a>
+            </div>
+          </article>
+
+          <!-- PROJECT 2: Wazuh Security Monitoring Lab -->
+          <article class="card project-card reveal-item" data-category="blue">
+            <div class="project-thumb thumb-blue" aria-hidden="true">
+              <div class="thumb-window-dots">
+                <span></span><span></span><span></span>
+                <small class="mono-label">wazuh-edr-monitor.lab</small>
+              </div>
+              <svg class="project-illustration" viewBox="0 0 320 120" fill="none">
+                <rect x="28" y="25" width="264" height="70" rx="10" fill="#FFFFFF" stroke="#7798FF" stroke-width="2"/>
+                <polyline points="45,75 85,55 120,65 160,38 200,58 240,42 275,50" fill="none" stroke="#FF83B7" stroke-width="2.8" stroke-linecap="round" stroke-linejoin="round"/>
+                <circle cx="160" cy="38" r="5" fill="#73E4D2" stroke="#29283A" stroke-width="1.5"/>
+                <circle cx="240" cy="42" r="5" fill="#7798FF" stroke="#29283A" stroke-width="1.5"/>
+              </svg>
+            </div>
+
+            <div class="project-body">
+              <div class="project-meta-top">
+                <span class="category-pill pill-mint">Blue Team // Endpoint Defense</span>
+                <span class="mono-badge">[PLACEHOLDER LAB]</span>
+              </div>
+              <h3 class="project-title">Wazuh Security Monitoring Lab</h3>
+              <p class="project-description">
+                A lab exploring endpoint monitoring, security event collection, and alert investigation.
+              </p>
+              <ul class="tech-tag-list" aria-label="Technologies used">
+                <li>Wazuh</li>
+                <li>FIM</li>
+                <li>Sysmon</li>
+                <li>Linux / Windows</li>
+              </ul>
+            </div>
+
+            <div class="project-footer">
+              <a href="https://github.com/YOUR-USERNAME-HERE/YOUR-REPO-HERE" target="_blank" rel="noopener noreferrer" class="btn-link-github" aria-label="View Wazuh Security Monitoring Lab on GitHub (placeholder)">
+                <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                  <path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path>
+                </svg>
+                <span>View on GitHub</span>
+              </a>
+              <a href="#projects" class="btn-link-secondary" aria-label="Optional documentation link placeholder for Wazuh Lab">
+                <span>Architecture (Optional)</span>
+                <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                  <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path>
+                  <polyline points="15 3 21 3 21 9"></polyline>
+                  <line x1="10" y1="14" x2="21" y2="3"></line>
+                </svg>
+              </a>
+            </div>
+          </article>
+
+          <!-- PROJECT 3: Web Security Testing Lab -->
+          <article class="card project-card reveal-item" data-category="red">
+            <div class="project-thumb thumb-pink" aria-hidden="true">
+              <div class="thumb-window-dots">
+                <span></span><span></span><span></span>
+                <small class="mono-label">owasp-appsec-test.lab</small>
+              </div>
+              <svg class="project-illustration" viewBox="0 0 320 120" fill="none">
+                <rect x="35" y="22" width="250" height="76" rx="8" fill="#FFFFFF" stroke="#FF83B7" stroke-width="2"/>
+                <path d="M65 50L80 60L65 70" stroke="#29283A" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+                <line x1="92" y1="70" x2="145" y2="70" stroke="#FF83B7" stroke-width="2.5" stroke-linecap="round"/>
+                <rect x="180" y="38" width="82" height="44" rx="6" fill="#FFF5F7" stroke="#73E4D2" stroke-width="2"/>
+                <path d="M212 60H230" stroke="#29283A" stroke-width="2.2" stroke-linecap="round"/>
+              </svg>
+            </div>
+
+            <div class="project-body">
+              <div class="project-meta-top">
+                <span class="category-pill pill-pink">Red Team // AppSec</span>
+                <span class="mono-badge">[PLACEHOLDER LAB]</span>
+              </div>
+              <h3 class="project-title">Web Security Testing Lab</h3>
+              <p class="project-description">
+                A controlled environment for learning web application vulnerabilities and defensive testing.
+              </p>
+              <ul class="tech-tag-list" aria-label="Technologies used">
+                <li>OWASP Top 10</li>
+                <li>Burp Suite</li>
+                <li>Reconnaissance</li>
+                <li>Remediation</li>
+              </ul>
+            </div>
+
+            <div class="project-footer">
+              <a href="https://github.com/YOUR-USERNAME-HERE/YOUR-REPO-HERE" target="_blank" rel="noopener noreferrer" class="btn-link-github" aria-label="View Web Security Testing Lab on GitHub (placeholder)">
+                <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                  <path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path>
+                </svg>
+                <span>View on GitHub</span>
+              </a>
+              <a href="#projects" class="btn-link-secondary" aria-label="Optional writeup link placeholder for Web Security Testing Lab">
+                <span>Writeups (Optional)</span>
+                <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                  <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path>
+                  <polyline points="15 3 21 3 21 9"></polyline>
+                  <line x1="10" y1="14" x2="21" y2="3"></line>
+                </svg>
+              </a>
+            </div>
+          </article>
+
+          <!-- PROJECT 4: Detection Engineering Lab -->
+          <article class="card project-card reveal-item" data-category="purple">
+            <div class="project-thumb thumb-lavender" aria-hidden="true">
+              <div class="thumb-window-dots">
+                <span></span><span></span><span></span>
+                <small class="mono-label">purple-detection-rules.lab</small>
+              </div>
+              <svg class="project-illustration" viewBox="0 0 320 120" fill="none">
+                <circle cx="95" cy="60" r="32" fill="#FFFFFF" stroke="#FF83B7" stroke-width="2"/>
+                <circle cx="225" cy="60" r="32" fill="#FFFFFF" stroke="#73E4D2" stroke-width="2"/>
+                <path d="M127 60H193" stroke="#7798FF" stroke-width="2.5" stroke-dasharray="4 4"/>
+                <rect x="142" y="44" width="36" height="32" rx="6" fill="#FFFFFF" stroke="#7798FF" stroke-width="2"/>
+                <circle cx="95" cy="60" r="8" fill="#FF83B7"/>
+                <circle cx="225" cy="60" r="8" fill="#73E4D2"/>
+              </svg>
+            </div>
+
+            <div class="project-body">
+              <div class="project-meta-top">
+                <span class="category-pill pill-lavender">Purple Team // Detection</span>
+                <span class="mono-badge">[PLACEHOLDER LAB]</span>
+              </div>
+              <h3 class="project-title">Detection Engineering Lab</h3>
+              <p class="project-description">
+                Experiments involving attack simulation, log analysis, and detection rule validation.
+              </p>
+              <ul class="tech-tag-list" aria-label="Technologies used">
+                <li>MITRE ATT&amp;CK</li>
+                <li>Sigma Rules</li>
+                <li>Attack Simulation</li>
+                <li>Telemetry</li>
+              </ul>
+            </div>
+
+            <div class="project-footer">
+              <a href="https://github.com/YOUR-USERNAME-HERE/YOUR-REPO-HERE" target="_blank" rel="noopener noreferrer" class="btn-link-github" aria-label="View Detection Engineering Lab on GitHub (placeholder)">
+                <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                  <path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path>
+                </svg>
+                <span>View on GitHub</span>
+              </a>
+              <a href="#projects" class="btn-link-secondary" aria-label="Optional detection rules link placeholder">
+                <span>Detection Rules (Optional)</span>
+                <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                  <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path>
+                  <polyline points="15 3 21 3 21 9"></polyline>
+                  <line x1="10" y1="14" x2="21" y2="3"></line>
+                </svg>
+              </a>
+            </div>
+          </article>
+
+        </div>
+
+      </div>
+    </section>
+
+    <!-- -------------------------------------------------------------------
+         9. EXPERIENCE & LEARNING JOURNEY
+         ------------------------------------------------------------------- -->
+    <section id="experience" class="experience-section section-padding">
+      <div class="container">
+        
+        <div class="section-header reveal-item">
+          <span class="section-tag mono-label">04 // TIMELINE_LOGS</span>
+          <h2 class="section-title">My Journey So Far</h2>
+          <p class="section-subtitle">
+            Milestones across hands-on labs, CTF challenges, coursework, and security exploration. Replace these placeholders with your own timeline.
+          </p>
+        </div>
+
+        <div class="timeline-wrapper">
+          
+          <!-- Milestone 1: Personal Home Lab -->
+          <div class="timeline-item reveal-item">
+            <div class="timeline-marker marker-mint" aria-hidden="true"></div>
+            <div class="card timeline-card">
+              <div class="timeline-header">
+                <span class="timeline-type pill-mint">Personal Security Labs</span>
+                <span class="mono-label timeline-date">[YEAR / PRESENT PLACEHOLDER]</span>
+              </div>
+              <h3 class="timeline-title">[LAB MILESTONE PLACEHOLDER — e.g., Building Home SOC &amp; Detection Environment]</h3>
+              <p class="timeline-org">[SELF-DIRECTED RESEARCH / HOME LAB PLACEHOLDER]</p>
+              <p class="timeline-desc">
+                Configured virtualized networks to practice SIEM ingestion, endpoint telemetry collection with Wazuh, alert triage workflows, and mapping simulated attacks to MITRE ATT&amp;CK.
+              </p>
+            </div>
+          </div>
+
+          <!-- Milestone 2: CTF & Practical Exercises -->
+          <div class="timeline-item reveal-item">
+            <div class="timeline-marker marker-pink" aria-hidden="true"></div>
+            <div class="card timeline-card">
+              <div class="timeline-header">
+                <span class="timeline-type pill-pink">CTF &amp; Hands-On Practice</span>
+                <span class="mono-label timeline-date">[DATE / YEAR PLACEHOLDER]</span>
+              </div>
+              <h3 class="timeline-title">[CTF / PLATFORM PLACEHOLDER — e.g., Security Challenges &amp; Investigation Labs]</h3>
+              <p class="timeline-org">[PLATFORM / COMMUNITY EVENT PLACEHOLDER]</p>
+              <p class="timeline-desc">
+                Practiced web vulnerability discovery, packet inspection, log investigation, and privilege escalation fundamentals in legal, controlled training environments.
+              </p>
+            </div>
+          </div>
+
+          <!-- Milestone 3: Internship / Workshop / Community (Optional Placeholder) -->
+          <div class="timeline-item reveal-item">
+            <div class="timeline-marker marker-blue" aria-hidden="true"></div>
+            <div class="card timeline-card">
+              <div class="timeline-header">
+                <span class="timeline-type pill-lavender">Workshop / Internship / Club</span>
+                <span class="mono-label timeline-date">[DATE / YEAR PLACEHOLDER]</span>
+              </div>
+              <h3 class="timeline-title">[ROLE OR WORKSHOP PLACEHOLDER — e.g., Cybersecurity Student Member / Intern]</h3>
+              <p class="timeline-org">[ORGANIZATION / UNIVERSITY CLUB PLACEHOLDER]</p>
+              <p class="timeline-desc">
+                Collaborated with peers on security workshops, shared lab writeups, and explored defensive and offensive security concepts. (Edit or remove this card as needed.)
+              </p>
+            </div>
+          </div>
+
+          <!-- Milestone 4: Education Foundation -->
+          <div class="timeline-item reveal-item">
+            <div class="timeline-marker marker-lavender" aria-hidden="true"></div>
+            <div class="card timeline-card">
+              <div class="timeline-header">
+                <span class="timeline-type pill-mint">Education</span>
+                <span class="mono-label timeline-date">[START YEAR – END YEAR PLACEHOLDER]</span>
+              </div>
+              <h3 class="timeline-title">[DEGREE / PROGRAM PLACEHOLDER]</h3>
+              <p class="timeline-org">[INSTITUTION / SCHOOL NAME PLACEHOLDER]</p>
+              <p class="timeline-desc">
+                Building a foundation in computer networks, operating systems, scripting, and information security principles.
+              </p>
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+
+    <!-- -------------------------------------------------------------------
+         10. CERTIFICATIONS & ACHIEVEMENTS
+         ------------------------------------------------------------------- -->
+    <section id="certifications" class="certifications-section section-padding">
+      <div class="container">
+        
+        <div class="section-header reveal-item">
+          <span class="section-tag mono-label">05 // CREDENTIALS_AND_COURSES</span>
+          <h2 class="section-title">Learning &amp; Certifications</h2>
+          <p class="section-subtitle">
+            Courses, training paths, and certifications. Update these placeholder cards with your verified credentials or remove this section if not needed yet.
+          </p>
+        </div>
+
+        <div class="cert-grid">
+
+          <!-- Certification Placeholder Card 1 -->
+          <article class="card cert-card reveal-item">
+            <div class="cert-top">
+              <div class="cert-badge-icon badge-mint" aria-hidden="true">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <circle cx="12" cy="8" r="6"/>
+                  <path d="M15.477 12.89 17 22l-5-3-5 3 1.523-9.11"/>
+                </svg>
+              </div>
+              <span class="mono-badge">[PLACEHOLDER]</span>
+            </div>
+            <h3 class="cert-title">[CERTIFICATION OR COURSE NAME 1]</h3>
+            <p class="cert-issuer">Issued by: <strong>[ISSUING ORGANIZATION PLACEHOLDER]</strong></p>
+            <p class="cert-date mono-label">Date: [MONTH YEAR / IN PROGRESS]</p>
+            <div class="cert-footer">
+              <a href="#certifications" class="btn-verify" aria-label="Verify credential 1 (replace with actual verification URL)">
+                <span>Verify Credential</span>
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                  <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path>
+                  <polyline points="15 3 21 3 21 9"></polyline>
+                  <line x1="10" y1="14" x2="21" y2="3"></line>
+                </svg>
+              </a>
+            </div>
+          </article>
+
+          <!-- Certification Placeholder Card 2 -->
+          <article class="card cert-card reveal-item">
+            <div class="cert-top">
+              <div class="cert-badge-icon badge-pink" aria-hidden="true">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/>
+                  <path d="m9 12 2 2 4-4"/>
+                </svg>
+              </div>
+              <span class="mono-badge">[PLACEHOLDER]</span>
+            </div>
+            <h3 class="cert-title">[CERTIFICATION OR COURSE NAME 2]</h3>
+            <p class="cert-issuer">Issued by: <strong>[ISSUING ORGANIZATION PLACEHOLDER]</strong></p>
+            <p class="cert-date mono-label">Date: [MONTH YEAR / IN PROGRESS]</p>
+            <div class="cert-footer">
+              <a href="#certifications" class="btn-verify" aria-label="Verify credential 2 (replace with actual verification URL)">
+                <span>Verify Credential</span>
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                  <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path>
+                  <polyline points="15 3 21 3 21 9"></polyline>
+                  <line x1="10" y1="14" x2="21" y2="3"></line>
+                </svg>
+              </a>
+            </div>
+          </article>
+
+          <!-- Certification Placeholder Card 3 -->
+          <article class="card cert-card reveal-item">
+            <div class="cert-top">
+              <div class="cert-badge-icon badge-lavender" aria-hidden="true">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <polyline points="16 18 22 12 16 6"/>
+                  <polyline points="8 6 2 12 8 18"/>
+                </svg>
+              </div>
+              <span class="mono-badge">[PLACEHOLDER]</span>
+            </div>
+            <h3 class="cert-title">[SECURITY TRAINING PATH / BADGE 3]</h3>
+            <p class="cert-issuer">Issued by: <strong>[PLATFORM / ISSUER PLACEHOLDER]</strong></p>
+            <p class="cert-date mono-label">Date: [MONTH YEAR / IN PROGRESS]</p>
+            <div class="cert-footer">
+              <a href="#certifications" class="btn-verify" aria-label="Verify credential 3 (replace with actual verification URL)">
+                <span>Verify Credential</span>
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                  <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path>
+                  <polyline points="15 3 21 3 21 9"></polyline>
+                  <line x1="10" y1="14" x2="21" y2="3"></line>
+                </svg>
+              </a>
+            </div>
+          </article>
+
+        </div>
+
+      </div>
+    </section>
+
+    <!-- -------------------------------------------------------------------
+         11. CONTACT SECTION
+         ------------------------------------------------------------------- -->
+    <section id="contact" class="contact-section section-padding">
+      <div class="container">
+        
+        <div class="card contact-card reveal-item">
+          <div class="terminal-window-bar" aria-hidden="true">
+            <span class="win-dot dot-pink"></span>
+            <span class="win-dot dot-mint"></span>
+            <span class="win-dot dot-blue"></span>
+            <span class="win-title">soc-core:~$ ./open_comms_channel.sh</span>
+          </div>
+
+          <div class="contact-card-body">
+            <span class="section-tag mono-label">06 // HANDSHAKE_PROTOCOL</span>
+            <h2 class="section-title">Let's Connect!</h2>
+            <p class="contact-lead">
+              Have a project, opportunity, or security idea? Let's connect.
+            </p>
+            <p class="contact-subtext">
+              I'm always happy to chat with fellow cybersecurity learners, SOC analysts, engineers, and recruiters. Reach out directly via email or connect on social platforms below.
+            </p>
+
+            <!-- Email Action Box (Direct mailto + Copy Email with confirmation) -->
+            <div class="email-action-bar">
+              <a href="mailto:phamquan270306@gmail.com" data-social="email" class="btn btn-primary">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                  <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path>
+                  <polyline points="22,6 12,13 2,6"></polyline>
+                </svg>
+                <span data-config="emailDisplay">phamquan270306@gmail.com</span>
+              </a>
+
+              <button type="button" id="copy-email-btn" class="btn btn-secondary" data-email="phamquan270306@gmail.com" aria-live="polite">
+                <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                  <rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect>
+                  <path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path>
+                </svg>
+                <span id="copy-email-text">Copy Email</span>
+              </button>
+            </div>
+
+            <!-- Configurable Social Channel Cards -->
+            <div class="contact-social-grid">
+              <a href="https://github.com/Aanny27" data-social="github" target="_blank" rel="noopener noreferrer" class="contact-channel-card">
+                <div class="channel-icon icon-mint" aria-hidden="true">
+                  <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path>
+                  </svg>
+                </div>
+                <div class="channel-info">
+                  <span class="mono-label">CODE &amp; LABS</span>
+                  <strong>GitHub</strong>
+                </div>
+              </a>
+
+              <a href="https://www.linkedin.com/in/qu%C3%A2n-ph%E1%BA%A1m-ba1164371" data-social="linkedin" target="_blank" rel="noopener noreferrer" class="contact-channel-card">
+                <div class="channel-icon icon-blue" aria-hidden="true">
+                  <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"></path>
+                    <rect x="2" y="9" width="4" height="12"></rect>
+                    <circle cx="4" cy="4" r="2"></circle>
+                  </svg>
+                </div>
+                <div class="channel-info">
+                  <span class="mono-label">PROFESSIONAL NETWORK</span>
+                  <strong>LinkedIn</strong>
+                </div>
+              </a>
+
+              <a href="https://www.facebook.com/quanka27/" data-social="facebook" target="_blank" rel="noopener noreferrer" class="contact-channel-card">
+                <div class="channel-icon icon-pink" aria-hidden="true">
+                  <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"></path>
+                  </svg>
+                </div>
+                <div class="channel-info">
+                  <span class="mono-label">COMMUNITY</span>
+                  <strong>Facebook</strong>
+                </div>
+              </a>
+            </div>
+
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+  </main>
+
+  <!-- =====================================================================
+       12. FOOTER
+       ===================================================================== -->
+  <footer class="site-footer">
+    <div class="container footer-container">
+      
+      <div class="footer-top">
+        <div class="footer-brand">
+          <span class="brand-name" data-config="ownerName">PhQuan</span>
+          <p class="footer-Note">Built with curiosity and a little bit of caffeine.</p>
+        </div>
+
+        <div class="footer-actions">
+          <button type="button" id="replay-intro-btn" class="btn btn-replay">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+              <polyline points="1 4 1 10 7 10"></polyline>
+              <path d="M3.51 15a9 9 0 1 0 2.13-9.36L1 10"></path>
+            </svg>
+            <span>Replay Intro</span>
+          </button>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <p class="copyright">
+          &copy; <span id="current-year">2026</span> <span data-config="ownerName">[YOUR NAME]</span>. All rights reserved.
+        </p>
+
+        <ul class="footer-social-links" aria-label="Footer social links">
+          <li><a href="https://github.com/Aanny27" data-social="github" target="_blank" rel="noopener noreferrer">GitHub</a></li>
+          <li><a href="https://www.linkedin.com/in/qu%C3%A2n-ph%E1%BA%A1m-ba1164371" data-social="linkedin" target="_blank" rel="noopener noreferrer">LinkedIn</a></li>
+          <li><a href="https://www.facebook.com/quanka27/" data-social="facebook" target="_blank" rel="noopener noreferrer">Facebook</a></li>
+          <li><a href="mailto:phamquan270306@gmail.com" data-social="email">Email</a></li>
+        </ul>
+      </div>
+
+    </div>
+  </footer>
+
+  <!-- Main JavaScript -->
+  <script src="js/main.js"></script>
+</body>
+</html>
